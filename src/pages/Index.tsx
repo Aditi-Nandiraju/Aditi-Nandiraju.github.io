@@ -5,8 +5,6 @@ import ProjectsSection from "@/components/ProjectsSection";
 import CertificatesSection from "@/components/CertificatesSection";
 import EventsSection from "@/components/EventsSection";
 
-const handleAdd = () => alert("Add feature coming soon");
-
 const Index = () => (
   <div className="relative min-h-screen">
     <StarryBackground />
@@ -15,11 +13,11 @@ const Index = () => (
         My Portfolio
       </h1>
       <p className="text-muted-foreground text-center mb-16 text-lg">Developer • Creator • Problem Solver</p>
-      <ProfileSection onAdd={handleAdd} />
-      <LinksSection onAdd={handleAdd} />
-      <ProjectsSection onAdd={handleAdd} />
-      <EventsSection onAdd={handleAdd} />
-      <CertificatesSection onAdd={handleAdd} />
+      <ProfileSection />
+      <LinksSection />
+      <ProjectsSection />
+      <EventsSection />
+      <CertificatesSection />
     </main>
   </div>
 );

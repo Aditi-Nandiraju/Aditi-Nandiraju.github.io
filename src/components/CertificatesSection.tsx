@@ -1,4 +1,6 @@
+import { useState } from "react";
 import SectionHeader from "./SectionHeader";
+import ImageLightbox from "./ImageLightbox";
 import event1 from "../assets/ai_for_everyone.png";
 import event2 from "../assets/machine learning with python.png";
 import event3 from "../assets/intro_to_db.png";
@@ -76,28 +78,41 @@ const certs = [
   
 ];
 
-const CertificatesSection = ({ onAdd }: { onAdd: () => void }) => (
-  <section className="mb-16">
-    <SectionHeader title="Certificates & Courses" onAdd={onAdd} />
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {certs.map((c) => (
-        <div key={c.title} className="glass-card overflow-hidden flex flex-col">
-          <div className="aspect-[3/4] h-36 w-full bg-muted/10 flex items-center justify-center">
-            <img
-              src={c.image}
-              alt={c.title}
-              loading="lazy"
-              className="h-full w-full object-contain"
-            />
+const CertificatesSection = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
+  return (
+    <section className="mb-16">
+      <SectionHeader title="Certificates & Courses" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {certs.map((c) => (
+          <div key={c.title} className="glass-card overflow-hidden flex flex-col">
+            <div className="aspect-[3/4] h-36 w-full bg-muted/10 flex items-center justify-center">
+              <img
+                src={c.image}
+                alt={c.title}
+                loading="lazy"
+                className="h-full w-full object-contain cursor-pointer hover:opacity-90 transition-opacity"
+                onClick={() => setLightbox({ src: c.image, alt: c.title })}
+              />
+            </div>
+            <div className="p-6 flex-1">
+              <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{c.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{c.description}</p>
+            </div>
           </div>
-          <div className="p-6 flex-1">
-            <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{c.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{c.description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+        ))}
+      </div>
+
+      {lightbox && (
+        <ImageLightbox
+          src={lightbox.src}
+          alt={lightbox.alt}
+          onClose={() => setLightbox(null)}
+        />
+      )}
+    </section>
+  );
+};
 
 export default CertificatesSection;

@@ -1,7 +1,7 @@
 import SectionHeader from "./SectionHeader";
 import profileImg from "../assets/profile_picture.jpeg";
 
-const ProfileSection = ({ onAdd }: { onAdd: () => void }) => {
+const ProfileSection = () => {
   const profileSrc = profileImg;
   const bio = 
   `AI and web development enthusiast building practical, real-world solutions. From AI-powered tools like an Intelligent Excuse Generator to hackathon projects and research work, I focus on turning ideas into functional products while continuously learning and improving.
@@ -10,7 +10,7 @@ Open to collaboration and freelance opportunities.`;
 
   return (
     <section className="mb-16">
-      <SectionHeader title="Profile" onAdd={onAdd} />
+      <SectionHeader title="Profile" />
       <div className="glass-card p-8 flex flex-col md:flex-row gap-8 items-start">
         <img
           src={profileSrc}
