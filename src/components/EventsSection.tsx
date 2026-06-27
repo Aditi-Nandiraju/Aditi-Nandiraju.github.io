@@ -9,6 +9,15 @@ import event4 from "../assets/Cheat_Better.png";
 import event5 from "../assets/clash_code_certificate.jpg";
 import event6 from "../assets/hacktherank.jpg";
 import event7 from "../assets/reserach_paper_certificate.png";
+import event8 from "../assets/attentionx ai hackathon certiicate.jpg";
+import event9 from "../assets/Vishwa CTF participation certificate.png";
+import event10 from "../assets/AI webforge participation.png";
+import event11 from "../assets/Byte battle participation.png";
+import event12 from "../assets/tdpcl paper publish certificate.png";
+import event13 from "../assets/Xpecto Data science contest.png";
+import event14 from "../assets/Decode and display.png";
+import event15 from "../assets/ML spark.png";
+import event16 from "../assets/code strike certificate.png";
 
 const events = [
   { name: "Grinova Ideathon", 
@@ -39,6 +48,41 @@ const events = [
     description: "Published an abstract only paper on the topic-Ethical, legal and social implications of Generative AI in education and business ",
     image: event7 },
 
+  { name: "AttentionX AI Hackathon",
+    description: "Participated in a hackathon to develop a system to extract short clips of data from long form videos.",
+    image: event8 },
+
+  { name: "Vishwa CTF",
+    description: "Jeopardy-style Capture The Flag (CTF) cybersecurity competition organized by CyberCell VIT. Participants solve security challenges across multiple domains to earn points and rank on the live leaderboard.",
+    image: event9 },
+
+  { name: "AI Webforge",
+    description: "Fast-paced challenge to design and develop a website showcasing projects, skills, and achievements.",
+    image: event10 },
+
+  { name: "Byte Battle",
+    description: "The Ultimate Coding Showdown — a competitive coding contest evaluating problem-solving ability, logical thinking, and programming expertise under real-world constraints.",
+    image: event11 },
+
+  { name: "Research paper publication",
+    description: "Published a research paper on the topic 'AI enabled predictive monitoring for healthcare and aviation'.",
+    image: event12 },
+
+  { name: "Xpecto – Data Science Contest",
+    description: "Used Altair RapidMiner to build, train, and deploy predictive models. Made a project on the Agriculture domain.",
+    image: event13 },
+
+  { name: "Decode & Display – Data Visualization Challenge",
+    description: "Transformed raw data into meaningful insights through effective visualizations using a real-world dataset.",
+    image: event14 },
+
+  { name: "ML SPARK – Machine Learning Challenge",
+    description: "Built a machine learning model using Python on a given case study involving data analysis and problem-solving.",
+    image: event15 },
+
+  { name: "CodeStrike",
+    description: "Official Coding Championship by ByteBattle Global Community — evaluating problem-solving skills, algorithmic thinking, and coding efficiency under real-world constraints.",
+    image: event16 },
 ];
 const EventsSection = () => {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
