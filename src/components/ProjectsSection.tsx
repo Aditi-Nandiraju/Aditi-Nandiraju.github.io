@@ -12,6 +12,7 @@ const projects = [
     title: "LinkTrack",
     description: "LinkTrack is a secure web application that transforms long URLs into manageable short links-set click limits, toggle link availability, and update destination URLs in real-time",
     github: "https://github.com/Aditi-Nandiraju/link-buddy",
+    demo:"https://url-short-track.lovable.app/"
   },
   {
     title: "CurioBuddy- a learning app",
